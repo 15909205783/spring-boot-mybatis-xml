@@ -22,6 +22,13 @@ public class User implements Serializable {
         this.userSex = userSex;
     }
 
+    public User( String userName, String passWord, UserSexEnum userSex, String nickName) {
+        this.userName = userName;
+        this.passWord = passWord;
+        this.userSex = userSex;
+        this.nickName = nickName;
+    }
+
     public Long getId() {
         return id;
     }

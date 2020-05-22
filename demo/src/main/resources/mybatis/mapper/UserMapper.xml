@@ -16,4 +16,13 @@
         <include refid="Base_Column_List"/>
         FROM users
     </select>
+    <insert id="insert" parameterType="user">
+        insert  into users(userName,passWord,user_sex,nick_name)
+        value (#{userName},#{passWord},#{userSex},#{nickName})
+    </insert>
+    <select id="getOne" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select 
+        <include refid="Base_Column_List"/>
+    </select>
+
 </mapper>

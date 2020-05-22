@@ -18,9 +18,9 @@ public class UserMapperTest {
 
     @Test
     public void testInsert() throws Exception {
-        userMapper.insert(new User("aa", "a123456", UserSexEnum.MAN));
-        userMapper.insert(new User("bb", "b123456", UserSexEnum.WOMAN));
-        userMapper.insert(new User("cc", "b123456", UserSexEnum.WOMAN));
+        userMapper.insert(new User("aa", "a123456", UserSexEnum.MAN,"aa1"));
+        userMapper.insert(new User("bb", "b123456", UserSexEnum.WOMAN,"bb1"));
+        userMapper.insert(new User("cc", "b123456", UserSexEnum.WOMAN,"cc1"));
 
         Assert.assertEquals(3, userMapper.getAll().size());
     }

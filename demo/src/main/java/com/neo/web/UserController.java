@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class UserController {
@@ -25,6 +26,18 @@ public class UserController {
         User user=userMapper.getOne(id);
         return user;
     }
+    /**
+     * 制造一个死循环，实现cpu100%
+     */
+    @RequestMapping("/lock")
+    public void lock(){
+        System.out.println("开始死锁操作。。。。");
+        StringBuffer stringBuffer = new StringBuffer();
+        while(true){
+            String uuid = UUID.randomUUID().toString();
+        }
+    }
+
 
     @RequestMapping("/add")
     public void save(User user) {
